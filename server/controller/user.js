@@ -26,9 +26,7 @@ exports.getOne = function (req,res,next) {
 };
 
 exports.create = function (req,res,next) {
-  console.log(req.body);
     var user = new User(req.body);
-
     user.save(function(err, user) {
         if (!err) {
             res.json(user);
@@ -63,6 +61,7 @@ exports.update = function (req,res,next) {
 };
 
 exports.remove = function (req,res,next) {
+  console.log(req.params.userid);
     User.findOne({ 'userId': req.params.userid }, function(err, user) {
         if (!err && user) {
             user.remove();

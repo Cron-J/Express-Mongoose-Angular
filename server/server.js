@@ -2,13 +2,13 @@ var express = require('express'),
     Routes = require('./routes'),
     Db = require('./config/db'),
     config = require('./config/config');
-var bodyParser = require('body-parser');    
     
 var app = express();
 
 app.use(express.static(__dirname + '/../client/src'));
 
-app.use(bodyParser.urlencoded({ extended: true }));
+// parse urlencoded request bodies into req.body
+app.use(express.bodyParser())
 
 require('./routes')(app);
 

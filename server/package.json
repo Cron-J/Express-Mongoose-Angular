@@ -9,7 +9,7 @@
   "dependencies": {
     "body-parser": "^1.10.0",
     "boom": "^2.6.1",
-    "express": "^4.10.6",
+    "express": "~3.3.4",
     "joi": "4.x.x",
     "mongoose": "^3.8.20"
   }

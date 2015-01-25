@@ -6,12 +6,14 @@ var User      = require('./controller/user'),
 // API Server Endpoints
 module.exports = function(app){
 
-	app.route('/user')
-	   .post(User.create)
-       .get(User.getAll);
+	app.post('/user', User.create);
 
-    app.route('/user/{userid}')
-       .get(User.getOne)
-       .put(User.update)
-       .delete(User.remove);
+	app.get('/user', User.getAll);
+
+	app.get('/user/:userid', User.getOne);
+
+	app.put('/user/:userid', User.update);
+
+	app.delete('/user/:userid', User.remove);
+
 }
