@@ -12,5 +12,16 @@
     "express": "~3.3.4",
     "joi": "4.x.x",
     "mongoose": "^3.8.20"
+  },
+  "keywords": [
+    "node.js",
+    "express",
+    "mongoose",
+    "angular"
+  ],
+  "author": {
+    "name": "gaurav gupta",
+    "email": "gaurav_bng@hotmail.com",
+    "website": "www.cronj.com"
   }
 }
